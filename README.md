@@ -1,14 +1,17 @@
-# Anti-AI Writing Skill
+# PM Claude Skills
 
 Skill files I use daily to run my product work with Claude. A skill is a markdown file with a trigger description and a set of rules; Claude reads it before doing the matching type of task. Instead of re-explaining my standards in every chat, the standards live in files and get applied automatically.
 
-I'm a Senior Product Manager at a B2B SaaS company. This skill exists because I kept correcting the same thing: AI-sounding prose in my documents. That problem turned out to be fixable with written doctrine rather than repeated feedback.
+I'm a Senior Product Manager at a B2B SaaS company. These skills exist because I kept correcting the same things: AI-sounding prose, thin feature-request writeups, evasive roadmap comms, and metrics nobody could defend in a review. Each turned out to be fixable with written doctrine rather than repeated feedback.
 
 ## What's here
 
 | Skill | What it does |
 |---|---|
 | [`anti-ai-writing`](skills/anti-ai-writing/SKILL.md) | My writing guide. Applies to everything I produce: Slack messages, PRDs, strategy docs, emails. Bans buzzwords and filler, forces the point into the first sentences, and includes rewrite patterns from vague to specific. |
+| [`feature-request-triage`](skills/feature-request-triage/SKILL.md) | Recovers the problem behind a feature request before anyone commits to the proposed solution. Classifies each ask as an outcome gap, workaround symptom, preference, parity ask, or one-off customisation, and requires evidence — who asked, how many, how often — before a call is made. |
+| [`roadmap-tradeoff-framing`](skills/roadmap-tradeoff-framing/SKILL.md) | Writes honest prioritisation narratives. Forces every roadmap update to name what didn't get built, the constraint that forced the call, who feels the cost, and the condition that would reopen the decision. |
+| [`metric-definition-checker`](skills/metric-definition-checker/SKILL.md) | Validates any metric before it goes into an external or high-stakes document. Every number needs a definition, denominator, time window, source, and last-verified date, plus a MEASURED / REPORTED / ESTIMATE confidence label. |
 
 Plus [`scripts/check_skill.py`](scripts/check_skill.py), a small validator I run before packaging a skill: checks the frontmatter, flags an over-long description, and zips the folder for upload.
 
@@ -17,7 +20,7 @@ Plus [`scripts/check_skill.py`](scripts/check_skill.py), a small validator I run
 1. **Writing.** Every document, message, or post goes through `anti-ai-writing`. The skill encodes my actual failure patterns, not generic advice. When I catch a new AI-writing tell in my output, I add it to the guide, so the skill improves with use.
 2. **Versioning.** Skills are markdown in a folder, so they version like code. When a rule changes, the diff shows exactly what changed and why.
 
-The private version of this skill contains employer-specific detail. What's published here is the reusable methodology with all of that removed.
+The private versions of these skills contain employer-specific detail. What's published here is the reusable methodology with all of that removed.
 
 ## Why this beats prompting from scratch
 
