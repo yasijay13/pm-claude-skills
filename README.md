@@ -1,4 +1,4 @@
-# PM Claude Skills
+# Anti-AI Writing Skill
 
 Skill files I use daily to run my product work with Claude. A skill is a markdown file with a trigger description and a set of rules; Claude reads it before doing the matching type of task. Instead of re-explaining my standards in every chat, the standards live in files and get applied automatically.
 
